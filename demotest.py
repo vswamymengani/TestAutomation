@@ -35,3 +35,23 @@ if current_balance < 0:
     print(f"Dear {bank_customer['name']}, Account is over drawn!",'balance:',current_balance)
 else:
     print("Account status: Healthy.")
+#------Every Transaction Processing using for loop----------
+running_balance=0.0
+bank_customer['transactions'].append(1500)
+for transaction in transaction_hitory:
+    if transaction>0:
+        print(f"Deposited : ${transaction}")
+    else:
+        print(f"Withdraw: ${transaction}")
+    running_balance += transaction
+    print(f"final settlement balance ${running_balance}")
+current_balance=sum(bank_customer['transactions'])
+print(current_balance)
+#----Draining Funds Until a while Condition Met ------
+subscription_amt=299.50
+month_paid_status=0
+while current_balance>0:
+    current_balance -=subscription_amt
+    month_paid_status+=1
+    print(f"this month subdcription amount {subscription_amt} deducted and current balance {current_balance}")
+print(f"Insufficient funds")
