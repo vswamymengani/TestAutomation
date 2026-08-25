@@ -1,0 +1,5 @@
+Alice,Engineering,75000
+Bob,Marketing,55000
+Charlie,Engineering,80000
+David,HR,50000
+Eva,Marketing,62000
